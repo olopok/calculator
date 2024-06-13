@@ -10,30 +10,36 @@
     width: 350px;
     height: 500px;
     border: 2px solid darkgrey;
+    background-color: rgb(87, 155, 107);
 }
 
 #display {
-    width: 330px;
+    width: 335px;
     height: 100px;
     align-self: start;
     border: 1px solid darkgrey;
+    border-radius: 5px;
     margin-top: 5px;
+    background-color: rgb(127, 255, 212);
 }
 
 .buttonbox {
-    border: 1px solid;
+    /* border: 1px solid; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: space-evenly;
-    padding-top: 5px;
-    margin: 10px;
+        /* justify-content: space-evenly; */
+    /* align-content: space-evenly; */
+    /* padding-top: 5px; */
+    /* margin: 10px; */
 }
 
 .button {
     width: 65px;
     height: 65px;
     border: 1px solid darkgrey;
+    border-radius: 5px;
     margin: 5px;
     flex: auto;
+    background-color: rgb(212, 212, 157);
+    font-size: 32px;
 }
