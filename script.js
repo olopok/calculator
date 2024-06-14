@@ -1,5 +1,7 @@
-const BUTTONS = document.querySelectorAll('.button');
-// BUTTONS.foreach(BUTTONS.addEventListener('onclick', displayValue));
+const BUTTONS = document.querySelectorAll('.number');
+const OPERATOR = document.querySelectorAll('.operator');
+
+
 for (let btn of BUTTONS) {
     btn.addEventListener('click', displayValue);
 };
@@ -10,11 +12,12 @@ let display = document.querySelector('.display');
 function displayValue(e) {
     // console.log(typeof e.target.textContent);
     numberString += e.target.textContent;
-    setValue();
+    display.textContent = numberString;
+
+    // setValue();
     
-    console.log(numberString);    
 };
 
-function setValue() {
-    display.textContent = numberString;
-}
+// function setValue() {
+//     display.textContent = numberString;
+// }
