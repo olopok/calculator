@@ -21,13 +21,16 @@ equal.addEventListener('click', () => {
     display.textContent = result;
     numberString1 = '';
     signOperator = '';
+    arr = '';
+    result = 0;
 } );
 
 cancel.addEventListener('click', () => {
     numberString1 = '';
+    signOperator = '';
     arr = '';
     result = 0;
-    display.innerHTML = '';
+    display.textContent = '';
 })
 
 function displayValue1(e) {
