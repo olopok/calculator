@@ -49,3 +49,11 @@
 .operator {
     background-color: darkkhaki;
 }
+
+.equal {
+   background-color: coral; 
+}
+
+.delete {
+    background-color: brown;
+}

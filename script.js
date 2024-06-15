@@ -1,15 +1,11 @@
 const BUTTONS = document.querySelectorAll('.number');
 const OPERATOR = document.querySelectorAll('.operator');
 let display = document.querySelector('.display');
-let span = document.getElementsByTagName('span');
+const equal = document.querySelector('.equal');
+const cancel = document.querySelector('.delete');
 
 let numberString1 = '';
-// let numberString2 = '';
-// let operand1 = 0;
-// let operand2 = 0;
-
 let arr = '';
-let arrOperation = [];
 let signOperator = '';
 let result = 0;
 
@@ -20,6 +16,19 @@ for (let btn of BUTTONS) {
 for (let opr of OPERATOR) {
     opr.addEventListener('click', assSign);
 }
+
+equal.addEventListener('click', () => {
+    display.textContent = result;
+    numberString1 = '';
+    signOperator = '';
+} );
+
+cancel.addEventListener('click', () => {
+    numberString1 = '';
+    arr = '';
+    result = 0;
+    display.innerHTML = '';
+})
 
 function displayValue1(e) {
     numberString1 += e.target.textContent;
