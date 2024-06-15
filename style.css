@@ -24,6 +24,7 @@
     background-color: rgb(127, 255, 212);
     font-size: 32px;
     text-align: end;
+    overflow: scroll;
 }
 
 .buttonbox {

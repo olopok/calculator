@@ -1,23 +1,51 @@
 const BUTTONS = document.querySelectorAll('.number');
 const OPERATOR = document.querySelectorAll('.operator');
+let display = document.querySelector('.display');
+let span = document.getElementsByTagName('span');
 
+let numberString1 = '';
+// let numberString2 = '';
+// let operand1 = 0;
+// let operand2 = 0;
+
+let arr = '';
+let arrOperation = [];
+let signOperator = '';
+let result = 0;
 
 for (let btn of BUTTONS) {
-    btn.addEventListener('click', displayValue);
-};
+    btn.addEventListener('click', displayValue1);
+}
 
-let numberString = '';
-let display = document.querySelector('.display');
+for (let opr of OPERATOR) {
+    opr.addEventListener('click', assSign);
+}
 
-function displayValue(e) {
-    // console.log(typeof e.target.textContent);
-    numberString += e.target.textContent;
-    display.textContent = numberString;
+function displayValue1(e) {
+    numberString1 += e.target.textContent;
+    display.textContent = numberString1;
+    arr = numberString1.split(signOperator);
+    switch (signOperator) {
+        case '+':
+            result = parseFloat(arr[0]) + parseFloat(arr[1]);
+            display.innerHTML = `${numberString1} <br> ${result}`;
+            break;
+        case '-':
+            result = parseFloat(arr[0]) - parseFloat(arr[1]);
+            display.innerHTML = `${numberString1} <br> ${result}`;
+            break;
+        case '*':
+            result = parseFloat(arr[0]) * parseFloat(arr[1]);
+            display.innerHTML = `${numberString1} <br> ${result}`;
+            break;
+        case '/':
+            result = parseFloat(arr[0]) / parseFloat(arr[1]);
+            result = result.toFixed(8);
+            display.innerHTML = `${numberString1} <br> ${result}`;
+            break;
+    }
+}
 
-    // setValue();
-    
-};
-
-// function setValue() {
-//     display.textContent = numberString;
-// }
+function assSign(e) {
+    signOperator = e.target.textContent;
+}
