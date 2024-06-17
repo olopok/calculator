@@ -29,7 +29,9 @@ DECIMAL.addEventListener('click', () => {
 
 INVERSE.addEventListener('click', signInversion);
 
-CANCEL.addEventListener('click', () => {
+CANCEL.addEventListener('click', deleteAll);
+
+function deleteAll(){
     number1 = '';
     number2 = '';
     signOperator = '';
@@ -38,7 +40,7 @@ CANCEL.addEventListener('click', () => {
     SECONDVALUE.textContent = '';
     OPR.textContent = '';
     TOTAL.textContent = '';
-});
+}
 
 CANCELLAST.addEventListener('click', removeLast);
 
